@@ -5,11 +5,20 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import { Users } from './collections/Users'
-import { Media } from './collections/Media'
+import { Users } from './collections/shared/Users'
+import { Media } from './collections/shared/Media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+
+const ALLOWED_ORIGINS = [
+  'http://localhost:3002', // anchor dev
+  'http://localhost:3003', // veros dev
+  'http://localhost:3004', // ripple dev
+  process.env.ANCHOR_URL,
+  process.env.VEROS_URL,
+  process.env.RIPPLE_URL,
+].filter(Boolean) as string[]
 
 export default buildConfig({
   admin: {
@@ -22,7 +31,8 @@ export default buildConfig({
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
+    // Output generated types to @vantage/payload-types package
+    outputFile: path.resolve(dirname, '../../../../packages/payload-types/src/types.ts'),
   },
   db: postgresAdapter({
     pool: {
@@ -30,5 +40,7 @@ export default buildConfig({
     },
   }),
   sharp,
+  cors: ALLOWED_ORIGINS,
+  csrf: ALLOWED_ORIGINS,
   plugins: [],
 })

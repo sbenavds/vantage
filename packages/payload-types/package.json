@@ -1,0 +1,21 @@
+{
+  "name": "@vantage/payload-types",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/types.ts",
+      "types": "./src/types.ts"
+    }
+  },
+  "main": "./src/types.ts",
+  "types": "./src/types.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@vantage/tsconfig": "workspace:*",
+    "typescript": "5.7.3"
+  }
+}

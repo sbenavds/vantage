@@ -1,0 +1,13 @@
+/* Ripple theme variables will be imported from @vantage/ui/themes/ripple.css */
+/* once @vantage/ui is set up in Phase 2 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}

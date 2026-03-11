@@ -1,50 +1,49 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.js
-.yarn/install-state.gz
 
-/.idea/*
-!/.idea/runConfigurations
+# Build outputs
+dist/
+.next/
+out/
+build/
 
-# testing
-/coverage
+# Turbo
+.turbo/
 
-# next.js
-/.next/
-/out/
+# Env files
+.env
+.env.local
+.env*.local
 
-# production
-/build
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
-# misc
+# OS
 .DS_Store
 *.pem
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Editor
+.idea/*
+!.idea/runConfigurations
 
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-.env
+# Vercel
+.vercel
 
-/media
+# Payload
+media/
+apps/cms/src/app/(payload)/admin/importMap.js
 
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+# Test artifacts
+coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

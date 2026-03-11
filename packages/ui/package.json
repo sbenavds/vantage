@@ -8,7 +8,10 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./themes/*": "./src/themes/*"
+    "./themes/anchor": "./src/themes/anchor.css",
+    "./themes/veros": "./src/themes/veros.css",
+    "./themes/ripple": "./src/themes/ripple.css",
+    "./styles": "./src/styles/globals.css"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -25,15 +28,21 @@
     "react": ">=19",
     "react-dom": ">=19"
   },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react-aria-components": "^1.8.0",
+    "tailwind-merge": "^3.3.0"
+  },
   "devDependencies": {
     "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "@vantage/tsconfig": "workspace:*",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "tailwindcss": "^4.1.0",
     "tsup": "^8.5.0",
     "typescript": "5.7.3",
     "vitest": "4.0.18"
-  },
-  "dependencies": {}
+  }
 }

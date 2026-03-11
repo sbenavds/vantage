@@ -1,0 +1,55 @@
+/*
+  Veros Biotech — Theme
+  Inspired by: Data Allergan, Pfizer, clinical research sites
+  Palette: clinical green, pure white, high-contrast slate
+  Personality: scientific, precise, accessible, regulatory-grade
+*/
+
+.theme-veros {
+  /* Clinical green primary */
+  --primary: oklch(0.48 0.14 165);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Neutral secondary */
+  --secondary: oklch(0.94 0.02 165);
+  --secondary-foreground: oklch(0.25 0.06 165);
+
+  /* Clinical white — near-white with slight warm undertone */
+  --background: oklch(0.99 0.003 90);
+  --foreground: oklch(0.12 0.005 165);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.12 0.005 165);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.12 0.005 165);
+
+  --muted: oklch(0.95 0.01 165);
+  --muted-foreground: oklch(0.48 0.03 165);
+
+  /* Subtle green accent */
+  --accent: oklch(0.93 0.04 165);
+  --accent-foreground: oklch(0.25 0.08 165);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.87 0.02 165);
+  --input: oklch(0.87 0.02 165);
+  --ring: oklch(0.48 0.14 165);
+
+  /* Minimal radius — clinical precision */
+  --radius: 0.25rem;
+}
+
+.theme-veros.dark {
+  --primary: oklch(0.6 0.14 165);
+  --primary-foreground: oklch(0.08 0.01 165);
+  --background: oklch(0.1 0.01 165);
+  --foreground: oklch(0.96 0.005 165);
+  --card: oklch(0.15 0.015 165);
+  --card-foreground: oklch(0.96 0.005 165);
+  --muted: oklch(0.2 0.015 165);
+  --muted-foreground: oklch(0.6 0.03 165);
+  --border: oklch(0.25 0.025 165);
+  --input: oklch(0.25 0.025 165);
+}

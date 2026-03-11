@@ -1,0 +1,55 @@
+/*
+  Ripple — Theme
+  Inspired by: ChangeUp, charity checkout, Discord bot integrations
+  Palette: warm coral, soft cream, earthy brown
+  Personality: human, emotional, generous, approachable
+*/
+
+.theme-ripple {
+  /* Warm coral primary */
+  --primary: oklch(0.63 0.19 28);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Soft secondary */
+  --secondary: oklch(0.95 0.03 55);
+  --secondary-foreground: oklch(0.3 0.07 28);
+
+  /* Warm cream background */
+  --background: oklch(0.99 0.008 70);
+  --foreground: oklch(0.18 0.04 28);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 28);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 28);
+
+  --muted: oklch(0.95 0.015 55);
+  --muted-foreground: oklch(0.52 0.05 28);
+
+  /* Coral accent */
+  --accent: oklch(0.93 0.04 28);
+  --accent-foreground: oklch(0.3 0.1 28);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.88 0.02 55);
+  --input: oklch(0.88 0.02 55);
+  --ring: oklch(0.63 0.19 28);
+
+  /* Friendly rounded radius — warm and human */
+  --radius: 0.75rem;
+}
+
+.theme-ripple.dark {
+  --primary: oklch(0.72 0.18 28);
+  --primary-foreground: oklch(0.1 0.02 28);
+  --background: oklch(0.14 0.025 28);
+  --foreground: oklch(0.96 0.008 55);
+  --card: oklch(0.19 0.03 28);
+  --card-foreground: oklch(0.96 0.008 55);
+  --muted: oklch(0.23 0.025 28);
+  --muted-foreground: oklch(0.64 0.04 28);
+  --border: oklch(0.28 0.035 28);
+  --input: oklch(0.28 0.035 28);
+}

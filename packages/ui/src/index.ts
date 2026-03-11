@@ -1,4 +1,8 @@
 // @vantage/ui — shared design system
-// Components are added here as they are built in Phase 2
+// Components are theme-agnostic — they use CSS variables from the active theme.
+// Import the theme in each app: import "@vantage/ui/themes/anchor"
 
-export {}
+export { Button } from "./components/Button"
+export type { ButtonProps } from "./components/Button"
+
+export { cn } from "./lib/utils"

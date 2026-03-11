@@ -1,0 +1,55 @@
+/*
+  Anchor Insurance — Theme
+  Inspired by: Old Republic, Progressive, Geico
+  Palette: deep navy, slate, crisp white
+  Personality: trustworthy, professional, fintech-clean
+*/
+
+.theme-anchor {
+  /* Navy blue primary */
+  --primary: oklch(0.3 0.09 255);
+  --primary-foreground: oklch(0.98 0 0);
+
+  /* Slate secondary */
+  --secondary: oklch(0.94 0.01 255);
+  --secondary-foreground: oklch(0.3 0.09 255);
+
+  /* Clean white backgrounds */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.15 0.01 255);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 255);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.01 255);
+
+  --muted: oklch(0.95 0.005 255);
+  --muted-foreground: oklch(0.5 0.02 255);
+
+  /* Navy accent */
+  --accent: oklch(0.93 0.02 255);
+  --accent-foreground: oklch(0.3 0.09 255);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.88 0.01 255);
+  --input: oklch(0.88 0.01 255);
+  --ring: oklch(0.3 0.09 255);
+
+  /* Conservative radius — formal and trust-inspiring */
+  --radius: 0.375rem;
+}
+
+.theme-anchor.dark {
+  --primary: oklch(0.65 0.09 255);
+  --primary-foreground: oklch(0.1 0.02 255);
+  --background: oklch(0.13 0.02 255);
+  --foreground: oklch(0.95 0.005 255);
+  --card: oklch(0.18 0.025 255);
+  --card-foreground: oklch(0.95 0.005 255);
+  --muted: oklch(0.22 0.02 255);
+  --muted-foreground: oklch(0.65 0.02 255);
+  --border: oklch(0.28 0.03 255);
+  --input: oklch(0.28 0.03 255);
+}

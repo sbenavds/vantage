@@ -1,0 +1,55 @@
+name: Playwright
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "apps/anchor/**"
+
+concurrency:
+  group: playwright-${{ github.ref }}
+  cancel-in-progress: true
+
+# Disabled until Phase 3 (Anchor) — uncomment when:
+# 1. Neon DB is configured and DATABASE_URL secret is set
+# 2. apps/anchor has e2e tests in apps/anchor/e2e/
+# 3. CMS is deployed to payload.vantage.com
+
+jobs:
+  e2e:
+    name: Anchor E2E
+    runs-on: ubuntu-latest
+    # Remove this condition when Anchor e2e tests are ready
+    if: false
+    env:
+      NEXT_PUBLIC_CMS_URL: ${{ secrets.CMS_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: pnpm --filter=anchor exec playwright install --with-deps chromium
+
+      - name: Build Anchor
+        run: pnpm turbo build --filter=anchor
+
+      - name: Run E2E tests
+        run: pnpm --filter=anchor test:e2e
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-${{ github.sha }}
+          path: apps/anchor/playwright-report
+          retention-days: 7

@@ -1,13 +1,8 @@
-/* Anchor theme variables will be imported from @vantage/ui/themes/anchor.css */
-/* once @vantage/ui is set up in Phase 2 */
+@import "@vantage/ui/styles";
+@import "@vantage/ui/themes/anchor";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+/* Anchor-specific type tokens */
+@theme inline {
+  --font-serif: var(--font-lora);
+  --font-sans: var(--font-inter);
 }

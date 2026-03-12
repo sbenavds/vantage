@@ -35,14 +35,23 @@
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.18",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-themes": "^8.6.18",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-vite": "^8.6.18",
+    "@storybook/test": "^8.6.18",
     "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "@vantage/tsconfig": "workspace:*",
+    "@vitejs/plugin-react": "^4.5.2",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "storybook": "^8.6.18",
     "tailwindcss": "^4.1.0",
     "tsup": "^8.5.0",
     "typescript": "5.7.3",
+    "vite": "^6.4.1",
     "vitest": "4.0.18"
   }
 }

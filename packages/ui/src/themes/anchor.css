@@ -1,55 +1,88 @@
 /*
   Anchor Insurance — Theme
-  Inspired by: Old Republic, Progressive, Geico
-  Palette: deep navy, slate, crisp white
-  Personality: trustworthy, professional, fintech-clean
+  Deep navy primary, warm white surfaces, lime-green CTA accent
+  Personality: trustworthy, established, clear
 */
 
 .theme-anchor {
-  /* Navy blue primary */
-  --primary: oklch(0.3 0.09 255);
+  /* --- Brand --- */
+  --primary: oklch(0.22 0.07 255);
   --primary-foreground: oklch(0.98 0 0);
 
-  /* Slate secondary */
-  --secondary: oklch(0.94 0.01 255);
-  --secondary-foreground: oklch(0.3 0.09 255);
+  /* --- Vivid CTA accent — "approved / protected / go" --- */
+  --accent-vivid: oklch(0.83 0.21 128);
+  --accent-vivid-foreground: oklch(0.15 0.05 255);
 
-  /* Clean white backgrounds */
-  --background: oklch(0.99 0 0);
-  --foreground: oklch(0.15 0.01 255);
+  /* --- Backgrounds --- */
+  --background: oklch(0.99 0.002 255);
+  --foreground: oklch(0.13 0.03 255);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.01 255);
+  --card-foreground: oklch(0.13 0.03 255);
 
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.01 255);
+  --popover-foreground: oklch(0.13 0.03 255);
 
-  --muted: oklch(0.95 0.005 255);
+  /* --- Secondary / Muted --- */
+  --secondary: oklch(0.95 0.01 255);
+  --secondary-foreground: oklch(0.22 0.07 255);
+
+  --muted: oklch(0.95 0.008 255);
   --muted-foreground: oklch(0.5 0.02 255);
 
-  /* Navy accent */
-  --accent: oklch(0.93 0.02 255);
-  --accent-foreground: oklch(0.3 0.09 255);
+  --accent: oklch(0.93 0.015 255);
+  --accent-foreground: oklch(0.22 0.07 255);
 
+  /* --- Semantic --- */
   --destructive: oklch(0.577 0.245 27.325);
 
-  --border: oklch(0.88 0.01 255);
-  --input: oklch(0.88 0.01 255);
-  --ring: oklch(0.3 0.09 255);
+  /* --- Borders & Inputs --- */
+  --border: oklch(0.89 0.01 255);
+  --input: oklch(0.94 0.008 255);
+  --ring: oklch(0.22 0.07 255);
 
-  /* Conservative radius — formal and trust-inspiring */
-  --radius: 0.375rem;
+  /* --- Radius --- */
+  --radius: 0.5rem;
+
+  /* --- Surface scale --- */
+  --surface-hero: oklch(0.16 0.06 255);
+  --surface-hero-fg: oklch(0.97 0.005 255);
+  --surface-hero-muted: oklch(0.97 0.005 255 / 65%);
+
+  /* Warm cream — feature card backgrounds */
+  --surface-cream: oklch(0.97 0.012 80);
+  --surface-cream-fg: oklch(0.13 0.03 255);
+
+  /* --- Anchor-specific tokens --- */
+  --gold: oklch(0.72 0.13 80);
+  --gold-subtle: oklch(0.93 0.04 80);
+
+  /* Section label underline */
+  --label-accent: oklch(0.72 0.13 80);
+
+  /* Signature: left-border mark on trust signals */
+  --mark-border: oklch(0.22 0.07 255);
+  --mark-border-width: 3px;
+
+  /* Image rounding — heavy, editorial */
+  --image-radius: 1.75rem;
+
+  /* Plan recommended */
+  --plan-recommended-bg: oklch(0.22 0.07 255);
+  --plan-recommended-fg: oklch(0.98 0 0);
 }
 
 .theme-anchor.dark {
   --primary: oklch(0.65 0.09 255);
   --primary-foreground: oklch(0.1 0.02 255);
-  --background: oklch(0.13 0.02 255);
+  --background: oklch(0.11 0.02 255);
   --foreground: oklch(0.95 0.005 255);
-  --card: oklch(0.18 0.025 255);
+  --card: oklch(0.15 0.025 255);
   --card-foreground: oklch(0.95 0.005 255);
-  --muted: oklch(0.22 0.02 255);
-  --muted-foreground: oklch(0.65 0.02 255);
-  --border: oklch(0.28 0.03 255);
-  --input: oklch(0.28 0.03 255);
+  --secondary: oklch(0.2 0.025 255);
+  --secondary-foreground: oklch(0.95 0.005 255);
+  --muted: oklch(0.2 0.02 255);
+  --muted-foreground: oklch(0.62 0.02 255);
+  --border: oklch(0.25 0.03 255);
+  --input: oklch(0.2 0.025 255);
 }

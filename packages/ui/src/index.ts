@@ -27,5 +27,8 @@ export type { SectionProps } from "./components/ui/section"
 export { Footer } from "./components/ui/footer"
 export type { FooterProps, FooterLinkGroup } from "./components/ui/footer"
 
+export { SectionLabel } from "./components/ui/section-label"
+export type { SectionLabelProps } from "./components/ui/section-label"
+
 // Utilities
 export { cn } from "./lib/utils"

@@ -20,6 +20,8 @@ const badgeVariants = cva(
         link: "text-primary underline-offset-4 [a&]:hover:underline",
         recommended:
           "bg-[var(--plan-recommended-bg,var(--primary))] text-[var(--plan-recommended-fg,var(--primary-foreground))]",
+        vivid:
+          "bg-[var(--accent-vivid,var(--primary))] text-[var(--accent-vivid-foreground,var(--primary-foreground))]",
       },
     },
     defaultVariants: {

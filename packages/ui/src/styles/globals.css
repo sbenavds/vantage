@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Tell Tailwind v4 to scan @vantage/ui component source files.
+   Without this, utility classes used inside component packages are missing from the CSS output. */
+@source "../**/*.{ts,tsx}";
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -29,6 +33,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  /* Extended surface tokens — each theme defines these; fallback to secondary */
+  --color-surface-cream: var(--surface-cream, var(--secondary));
+  --color-surface-hero: var(--surface-hero, var(--primary));
 }
 
 /* Fallback neutral theme — overridden by each app's theme class */

@@ -14,6 +14,7 @@
   "dependencies": {
     "@vantage/payload-types": "workspace:*",
     "@vantage/ui": "workspace:*",
+    "lucide-react": "^0.577.0",
     "next": "15.4.11",
     "react": "19.2.1",
     "react-dom": "19.2.1"

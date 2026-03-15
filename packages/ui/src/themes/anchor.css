@@ -11,6 +11,7 @@
 
   /* --- Vivid CTA accent — "approved / protected / go" --- */
   --accent-vivid: oklch(0.83 0.21 128);
+  --accent-vivid-hover: oklch(0.76 0.22 128);    /* darkened — ~8:1 contrast with foreground, passes AAA */
   --accent-vivid-foreground: oklch(0.15 0.05 255);
 
   /* --- Backgrounds --- */

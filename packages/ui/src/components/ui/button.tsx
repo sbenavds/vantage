@@ -19,6 +19,12 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        // Reads --accent-vivid tokens; falls back to --primary for themes without a vivid accent.
+        vivid:
+          "bg-[var(--accent-vivid,var(--primary))] text-[var(--accent-vivid-foreground,var(--primary-foreground))] hover:bg-[var(--accent-vivid-hover,var(--primary))]",
+        // Transparent button for dark/image backgrounds. Borders and bg derive from text color via `currentColor`.
+        "ghost-invert":
+          "border border-white/25 bg-transparent text-white hover:bg-white/10",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
